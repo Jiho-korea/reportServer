@@ -1,0 +1,33 @@
+server:
+  port: 9200
+
+logging:
+  config: classpath:log4j2.xml
+ 
+spring:
+  config:
+    activate:
+      on-profile: default
+  cloud:
+    gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':            
+            allowedOrigins: "http://localhost:9090"
+            allow-credentials: true
+            allowedHeaders:
+              - x-requested-with
+              - authorization
+              - content-type
+              - credential
+              - X-AUTH-TOKEN
+              - X-CSRF-TOKEN
+            allowedMethods:
+              - POST
+              - GET
+              - PUT
+              - OPTIONS
+              - DELETE 
+                           
+file:
+  path: C:\STS\workspace\smartcore\data\
