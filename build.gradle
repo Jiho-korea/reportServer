@@ -1,12 +1,12 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.3.RELEASE'
+	id 'org.springframework.boot' version '2.5.3'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 }
 
 group = 'com'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '16'
+sourceCompatibility = '11'
 
 apply plugin : 'java' 
 apply plugin : 'eclipse' 
@@ -30,27 +30,19 @@ ext {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-web:2.3.3.RELEASE'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
-	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+	implementation 'org.springframework.boot:spring-boot-starter-freemarker'
 	implementation 'javax.servlet:jstl'	
 	implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
 	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'org.postgresql:postgresql'
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter-log4j2'
 	developmentOnly "org.springframework.boot:spring-boot-devtools"	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'io.projectreactor:reactor-test'
-	implementation 'net.sf.jasperreports:jasperreports:6.12.2'
+	implementation 'net.sf.jasperreports:jasperreports:6.11.0'
+	implementation 'com.github.javafaker:javafaker:1.0.1'
 	implementation 'com.lowagie:itext:2.1.7'
-	implementation 'xalan:xalan:2.7.0'
-	implementation 'xml-apis:xml-apis:1.0.b2'
-	implementation 'org.springframework:spring-core:5.2.6.RELEASE'
-	implementation 'org.springframework:spring-web:4.2.7.RELEASE'
-	implementation 'org.springframework:spring-webmvc:4.2.7.RELEASE'
-	implementation 'org.springframework:spring-beans:4.2.7.RELEASE'
-	implementation 'org.springframework:spring-context-support:4.2.7.RELEASE'
 }
 
 dependencyManagement {
