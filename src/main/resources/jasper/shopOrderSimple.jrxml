@@ -31,25 +31,25 @@
 					</datasetRun>
 					<jr:listContents height="748" width="555">
 						<rectangle>
-							<reportElement x="0" y="49" width="555" height="136" uuid="d54954d6-c0aa-467a-9860-0fdfe6fb80d4"/>
+							<reportElement x="0" y="53" width="555" height="132" uuid="d54954d6-c0aa-467a-9860-0fdfe6fb80d4"/>
 							<graphicElement>
 								<pen lineColor="#777777"/>
 							</graphicElement>
 						</rectangle>
 						<textField>
-							<reportElement x="227" y="29" width="100" height="20" uuid="55d2cc9e-fb23-468b-93cf-db30e712a68e"/>
-							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<reportElement x="227" y="32" width="100" height="20" uuid="55d2cc9e-fb23-468b-93cf-db30e712a68e"/>
+							<textElement textAlignment="Center" verticalAlignment="Bottom"/>
 							<textFieldExpression><![CDATA[$F{orderNumber}]]></textFieldExpression>
 						</textField>
 						<textField>
-							<reportElement x="7" y="29" width="172" height="20" uuid="8724ffda-768f-474f-9b70-7d8584397bdd"/>
-							<textElement textAlignment="Left" verticalAlignment="Middle"/>
+							<reportElement x="7" y="32" width="172" height="20" uuid="8724ffda-768f-474f-9b70-7d8584397bdd"/>
+							<textElement textAlignment="Left" verticalAlignment="Bottom"/>
 							<textFieldExpression><![CDATA["Print Date : "+new java.text.SimpleDateFormat("yyyy-MM-dd").format(new Date())]]></textFieldExpression>
 						</textField>
 						<staticText>
-							<reportElement x="15" y="53" width="145" height="20" uuid="0473e5f8-ef6d-4896-9fee-3f401607cc12"/>
+							<reportElement x="15" y="55" width="145" height="20" uuid="0473e5f8-ef6d-4896-9fee-3f401607cc12"/>
 							<textElement verticalAlignment="Middle">
-								<font size="14" isBold="true"/>
+								<font size="12" isBold="true"/>
 							</textElement>
 							<text><![CDATA[Order Infomation]]></text>
 						</staticText>
@@ -153,8 +153,8 @@
 							</textField>
 						</frame>
 						<textField>
-							<reportElement x="460" y="29" width="78" height="20" uuid="b0fe50f3-6238-46ed-84cb-b0cab0ff98a6"/>
-							<textElement textAlignment="Center" verticalAlignment="Middle"/>
+							<reportElement x="460" y="32" width="78" height="20" uuid="b0fe50f3-6238-46ed-84cb-b0cab0ff98a6"/>
+							<textElement textAlignment="Center" verticalAlignment="Bottom"/>
 							<textFieldExpression><![CDATA["QTY : "+String.format("%.0f", $F{orderInfo}.get("qty"))]]></textFieldExpression>
 						</textField>
 						<frame>
@@ -325,17 +325,28 @@
 								</datasetRun>
 								<jr:listContents height="55" width="555">
 									<rectangle>
-										<reportElement x="0" y="0" width="555" height="55" uuid="d8966185-2354-4363-a4be-8e6984677983"/>
+										<reportElement x="0" y="0" width="140" height="55" uuid="d8966185-2354-4363-a4be-8e6984677983"/>
 										<graphicElement>
 											<pen lineColor="#777777"/>
 										</graphicElement>
 									</rectangle>
 									<textField>
-										<reportElement x="120" y="20" width="100" height="30" uuid="91c5dbdf-30da-44e2-b71a-83b783e64808"/>
+										<reportElement x="8" y="5" width="75" height="20" uuid="91c5dbdf-30da-44e2-b71a-83b783e64808">
+											<property name="com.jaspersoft.studio.unit.height" value="px"/>
+										</reportElement>
+										<textElement>
+											<font size="13"/>
+										</textElement>
 										<textFieldExpression><![CDATA[$F{gop}]]></textFieldExpression>
 									</textField>
+									<rectangle>
+										<reportElement x="140" y="0" width="415" height="55" uuid="03ccec71-99bf-4c20-8279-8a238c3021fd"/>
+										<graphicElement>
+											<pen lineColor="#777777"/>
+										</graphicElement>
+									</rectangle>
 									<staticText>
-										<reportElement x="330" y="20" width="100" height="30" uuid="f7be67df-d9e0-450e-a5ab-81bc55109ee1"/>
+										<reportElement x="190" y="10" width="100" height="30" uuid="f7be67df-d9e0-450e-a5ab-81bc55109ee1"/>
 										<textElement>
 											<font fontName="맑은 고딕"/>
 										</textElement>
