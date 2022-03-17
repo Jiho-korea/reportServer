@@ -43,6 +43,7 @@ dependencies {
 	implementation 'net.sf.jasperreports:jasperreports:6.11.0'
 	implementation 'com.github.javafaker:javafaker:1.0.1'
 	implementation 'com.lowagie:itext:2.1.7'
+	implementation 'net.sf.jasperreports:jasperreports-fonts:6.11.0'
 }
 
 dependencyManagement {
