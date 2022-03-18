@@ -35,16 +35,15 @@ public class ShopOrderService {
 
 			ObjectMapper objectMapper = new ObjectMapper();
 			List list = objectMapper.readValue(param.get("orderList") + "", ArrayList.class);
-			log.info(list);
+			
 			for(int i=0; i<list.size(); i++){
 				Map<String, Object> order = (HashMap)list.get(i);
 				List orderRoutingList = (ArrayList) order.get("orderRoutingList");
-				// 테스트용 쓰레기 값
+				// 테스트용 쓰레기 값 //
 				for(int j=0;j<20;j++)
 					orderRoutingList.add(orderRoutingList.get(0));
-				//
+				// routing 리스트 DataSource 등록
 				order.put("orderRoutingList", new JRMapCollectionDataSource(orderRoutingList));				
-				log.info(orderRoutingList);
 			}
 			param.put("OrderListDataSource", new JRMapCollectionDataSource(list));
 			

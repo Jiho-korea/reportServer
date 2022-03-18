@@ -16,45 +16,51 @@
 			<![CDATA[]]>
 		</queryString>
 		<field name="gop" class="java.lang.String"/>
+		<field name="standard_text" class="java.lang.String"/>
 	</subDataset>
 	<parameter name="OrderListDataSource" class="net.sf.jasperreports.engine.data.JRMapCollectionDataSource"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
 	<detail>
-		<band height="748" splitType="Stretch">
+		<band height="782" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<componentElement>
-				<reportElement x="0" y="0" width="555" height="748" uuid="3a9caee1-23b9-41b2-bb50-674d784d0142"/>
+				<reportElement x="0" y="0" width="555" height="560" uuid="3a9caee1-23b9-41b2-bb50-674d784d0142"/>
 				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" printOrder="Vertical">
 					<datasetRun subDataset="OrderListDataset" uuid="20edff54-875e-4be0-b90c-a2b9c6a99d12">
 						<dataSourceExpression><![CDATA[$P{OrderListDataSource}]]></dataSourceExpression>
 					</datasetRun>
-					<jr:listContents height="748" width="555">
+					<jr:listContents height="560" width="555">
 						<rectangle>
-							<reportElement x="0" y="53" width="555" height="132" uuid="d54954d6-c0aa-467a-9860-0fdfe6fb80d4"/>
+							<reportElement x="0" y="53" width="555" height="125" uuid="d54954d6-c0aa-467a-9860-0fdfe6fb80d4"/>
 							<graphicElement>
 								<pen lineColor="#777777"/>
 							</graphicElement>
 						</rectangle>
 						<textField>
 							<reportElement x="227" y="32" width="100" height="20" uuid="55d2cc9e-fb23-468b-93cf-db30e712a68e"/>
-							<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+							<textElement textAlignment="Center" verticalAlignment="Bottom">
+								<font fontName="맑은 고딕" size="9"/>
+							</textElement>
 							<textFieldExpression><![CDATA[$F{orderNumber}]]></textFieldExpression>
 						</textField>
 						<textField>
 							<reportElement x="7" y="32" width="172" height="20" uuid="8724ffda-768f-474f-9b70-7d8584397bdd"/>
-							<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+							<textElement textAlignment="Left" verticalAlignment="Bottom">
+								<font fontName="맑은 고딕" size="9"/>
+							</textElement>
 							<textFieldExpression><![CDATA["Print Date : "+new java.text.SimpleDateFormat("yyyy-MM-dd").format(new Date())]]></textFieldExpression>
 						</textField>
 						<staticText>
-							<reportElement x="15" y="55" width="145" height="20" uuid="0473e5f8-ef6d-4896-9fee-3f401607cc12"/>
+							<reportElement x="15" y="54" width="145" height="14" uuid="0473e5f8-ef6d-4896-9fee-3f401607cc12"/>
 							<textElement verticalAlignment="Middle">
-								<font size="12" isBold="true"/>
+								<font fontName="맑은 고딕" size="10" isBold="true"/>
 							</textElement>
 							<text><![CDATA[Order Infomation]]></text>
 						</staticText>
 						<frame>
-							<reportElement x="5" y="77" width="545" height="20" uuid="4061b653-f20d-444c-919b-3cb81da94600"/>
+							<reportElement x="5" y="70" width="545" height="20" uuid="4061b653-f20d-444c-919b-3cb81da94600"/>
 							<rectangle>
 								<reportElement x="0" y="0" width="200" height="20" backcolor="#E5E5E5" uuid="3a7081f4-5d48-471b-ad75-7ea216a332f5"/>
 								<graphicElement>
@@ -82,34 +88,34 @@
 							<staticText>
 								<reportElement x="10" y="0" width="180" height="20" uuid="5318ab96-1899-4e38-b52b-374880ea0a6e"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Material]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="214" y="0" width="83" height="20" uuid="c13d0663-59cb-4b20-b606-51d78ce33557"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Plant]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="339" y="0" width="83" height="20" uuid="200d4a48-0cec-441e-a681-97519e970be4"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Project]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="468" y="0" width="59" height="20" uuid="87ea80eb-ef3c-477b-bca4-9741c1bc22d7"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Rev.]]></text>
 							</staticText>
 						</frame>
 						<frame>
-							<reportElement x="5" y="97" width="545" height="20" uuid="1d0aae4d-b605-4ba7-83b2-f1e6295ee4c9"/>
+							<reportElement x="5" y="90" width="545" height="20" uuid="1d0aae4d-b605-4ba7-83b2-f1e6295ee4c9"/>
 							<rectangle>
 								<reportElement x="0" y="0" width="200" height="20" backcolor="#FFFFFF" uuid="2df5bae1-c1d9-4f34-9269-3a9e7fd7b26d"/>
 								<graphicElement>
@@ -134,31 +140,44 @@
 									<pen lineWidth="0.5" lineColor="#777777"/>
 								</graphicElement>
 							</rectangle>
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="10" y="0" width="180" height="20" uuid="9a71b729-8dcf-41d8-9296-4fc587c17cb0"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font size="12"/>
+									<font fontName="맑은 고딕" size="10" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("material")]]></textFieldExpression>
 							</textField>
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="214" y="0" width="83" height="20" uuid="c1ae9869-20a8-4b9f-ac32-50b3de72e753"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("plant")]]></textFieldExpression>
 							</textField>
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="339" y="0" width="83" height="20" uuid="eb5b4c4f-adb6-4842-8b17-a9124c9bb9cb"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{orderInfo}.get("project_name")!=null?$F{orderInfo}.get("project_name"):""]]></textFieldExpression>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderInfo}.get("project_name")]]></textFieldExpression>
+							</textField>
+							<textField>
+								<reportElement x="468" y="0" width="59" height="20" uuid="8830c58d-be93-47a9-ae6a-05e2a5b960ae"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderInfo}.get("rev")!=null?$F{orderInfo}.get("rev"):"-"]]></textFieldExpression>
 							</textField>
 						</frame>
 						<textField>
 							<reportElement x="460" y="32" width="78" height="20" uuid="b0fe50f3-6238-46ed-84cb-b0cab0ff98a6"/>
-							<textElement textAlignment="Center" verticalAlignment="Bottom"/>
+							<textElement textAlignment="Center" verticalAlignment="Bottom">
+								<font fontName="맑은 고딕" size="9"/>
+							</textElement>
 							<textFieldExpression><![CDATA["QTY : "+String.format("%.0f", $F{orderInfo}.get("qty"))]]></textFieldExpression>
 						</textField>
 						<frame>
-							<reportElement x="5" y="117" width="545" height="20" uuid="24a12140-5f0b-484a-9102-9d122c7adb84">
+							<reportElement x="5" y="110" width="545" height="20" uuid="24a12140-5f0b-484a-9102-9d122c7adb84">
 								<property name="com.jaspersoft.studio.layout" value="com.jaspersoft.studio.editor.layout.FreeLayout"/>
 							</reportElement>
 							<rectangle>
@@ -176,18 +195,20 @@
 							<staticText>
 								<reportElement x="16" y="0" width="97" height="20" uuid="1324570b-7ebe-4b52-94c8-bcf22c91e5a7"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Description]]></text>
 							</staticText>
 							<textField>
 								<reportElement x="136" y="0" width="409" height="20" uuid="cf1ccb38-4a9d-4526-83c0-5d73c3241447"/>
-								<textElement textAlignment="Left" verticalAlignment="Middle"/>
+								<textElement textAlignment="Left" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9"/>
+								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("description")!=null?$F{orderInfo}.get("description"):""]]></textFieldExpression>
 							</textField>
 						</frame>
 						<frame>
-							<reportElement x="5" y="140" width="545" height="20" uuid="9c968378-60de-4534-933a-8b6fa2aa8321"/>
+							<reportElement x="5" y="133" width="545" height="20" uuid="9c968378-60de-4534-933a-8b6fa2aa8321"/>
 							<rectangle>
 								<reportElement x="0" y="0" width="130" height="20" backcolor="#E5E5E5" uuid="0937855e-f7b2-4fe5-9224-5228e2b17951"/>
 								<graphicElement>
@@ -221,41 +242,41 @@
 							<staticText>
 								<reportElement x="16" y="0" width="97" height="20" uuid="3ecdbc55-2e0d-42a9-88ed-b0130a69e06b"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Start Date]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="146" y="0" width="97" height="20" uuid="e719f988-4f1f-4f36-9266-83dee63ff087"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[End Date]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="273" y="0" width="73" height="20" uuid="b8dedaef-7f7b-406c-b8b0-4ab2192eda9e"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Order Type]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="377" y="0" width="55" height="20" uuid="eae2d0ce-d451-4f09-8563-5c261109070a"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[TV]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="470" y="0" width="55" height="20" uuid="8aedd85e-6436-4f3c-90bd-d815cee062ca"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font isBold="true"/>
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[EFF]]></text>
 							</staticText>
 						</frame>
 						<frame>
-							<reportElement x="5" y="160" width="545" height="20" uuid="46465b02-b031-482e-ad09-cc38aa991fe9"/>
+							<reportElement x="5" y="153" width="545" height="20" uuid="46465b02-b031-482e-ad09-cc38aa991fe9"/>
 							<rectangle>
 								<reportElement x="0" y="0" width="130" height="20" backcolor="#FFFFFF" uuid="330b0f00-5a87-49bc-991f-6b149ead6c57"/>
 								<graphicElement>
@@ -288,70 +309,85 @@
 							</rectangle>
 							<textField>
 								<reportElement x="16" y="0" width="97" height="20" uuid="c2c110df-0637-4ba4-9663-e7d34ee95733"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
 								<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("yyyy-MM-dd").format($F{orderInfo}.get("start_date"))]]></textFieldExpression>
 							</textField>
 							<textField>
 								<reportElement x="146" y="0" width="97" height="20" uuid="aec92583-2a92-48ce-9f84-206f40c90261"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
 								<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("yyyy-MM-dd").format($F{orderInfo}.get("end_date"))]]></textFieldExpression>
 							</textField>
 							<textField>
 								<reportElement x="273" y="0" width="73" height="20" uuid="4f007100-7038-4847-b793-0b1e7e1ab907"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("order_category")]]></textFieldExpression>
 							</textField>
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="377" y="0" width="55" height="20" uuid="095185c1-f52c-4536-a586-aa5aff799c3a"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{orderInfo}.get("eff")!=null?$F{orderInfo}.get("eff"):""]]></textFieldExpression>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderInfo}.get("eff")]]></textFieldExpression>
 							</textField>
-							<textField>
+							<textField isBlankWhenNull="true">
 								<reportElement x="470" y="0" width="55" height="20" uuid="0c49d312-7f25-44d2-ab57-bdec23dca936"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{orderInfo}.get("tv")!=null?$F{orderInfo}.get("tv"):""]]></textFieldExpression>
-							</textField>
-							<textField>
-								<reportElement x="468" y="-63" width="59" height="20" uuid="8830c58d-be93-47a9-ae6a-05e2a5b960ae"/>
-								<textElement textAlignment="Center" verticalAlignment="Middle"/>
-								<textFieldExpression><![CDATA[$F{orderInfo}.get("rev")!=null?$F{orderInfo}.get("rev"):"-"]]></textFieldExpression>
+								<textElement textAlignment="Center" verticalAlignment="Middle">
+									<font fontName="맑은 고딕" size="9" isBold="true"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{orderInfo}.get("tv")]]></textFieldExpression>
 							</textField>
 						</frame>
 						<componentElement>
-							<reportElement x="0" y="185" width="555" height="55" uuid="a8401b67-aa41-44d9-95eb-62156fc5f28c"/>
+							<reportElement positionType="Float" stretchType="RelativeToTallestObject" x="0" y="178" width="555" height="381" isRemoveLineWhenBlank="true" uuid="a8401b67-aa41-44d9-95eb-62156fc5f28c">
+								<property name="com.jaspersoft.studio.unit.CONTENTS.width" value="px"/>
+							</reportElement>
 							<jr:list printOrder="Vertical">
 								<datasetRun subDataset="OrderRoutingListDataset" uuid="b916ac35-fa34-4b26-99bd-c0897ac32974">
 									<dataSourceExpression><![CDATA[$F{orderRoutingList}]]></dataSourceExpression>
 								</datasetRun>
-								<jr:listContents height="55" width="555">
-									<rectangle>
-										<reportElement x="0" y="0" width="140" height="55" uuid="d8966185-2354-4363-a4be-8e6984677983"/>
-										<graphicElement>
-											<pen lineColor="#777777"/>
-										</graphicElement>
-									</rectangle>
-									<textField>
-										<reportElement x="8" y="5" width="75" height="20" uuid="91c5dbdf-30da-44e2-b71a-83b783e64808">
-											<property name="com.jaspersoft.studio.unit.height" value="px"/>
-										</reportElement>
-										<textElement>
-											<font size="13"/>
-										</textElement>
-										<textFieldExpression><![CDATA[$F{gop}]]></textFieldExpression>
-									</textField>
-									<rectangle>
-										<reportElement x="140" y="0" width="415" height="55" uuid="03ccec71-99bf-4c20-8279-8a238c3021fd"/>
-										<graphicElement>
-											<pen lineColor="#777777"/>
-										</graphicElement>
-									</rectangle>
-									<staticText>
-										<reportElement x="190" y="10" width="100" height="30" uuid="f7be67df-d9e0-450e-a5ab-81bc55109ee1"/>
-										<textElement>
-											<font fontName="맑은 고딕"/>
-										</textElement>
-										<text><![CDATA[강지호 test]]></text>
-									</staticText>
+								<jr:listContents height="50" width="555">
+									<frame>
+										<reportElement x="0" y="0" width="555" height="50" uuid="d19e08e9-1651-4d2c-8acc-5c75ec9fc40a"/>
+										<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+											<pen lineStyle="Solid" lineColor="#777777"/>
+											<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+											<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+											<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+											<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+										</box>
+										<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+											<reportElement positionType="Float" x="141" y="0" width="414" height="50" uuid="26145331-afd9-4441-a2d6-fa75f3a80e23">
+												<property name="com.jaspersoft.studio.unit.height" value="px"/>
+											</reportElement>
+											<box padding="3">
+												<pen lineColor="#777777"/>
+												<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+												<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+												<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+												<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
+											</box>
+											<textElement>
+												<font fontName="맑은 고딕" size="8"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{standard_text}]]></textFieldExpression>
+										</textField>
+										<textField>
+											<reportElement positionType="Float" x="0" y="0" width="80" height="20" uuid="91c5dbdf-30da-44e2-b71a-83b783e64808">
+												<property name="com.jaspersoft.studio.unit.height" value="px"/>
+											</reportElement>
+											<box leftPadding="6"/>
+											<textElement>
+												<font fontName="맑은 고딕" size="15" isBold="true"/>
+											</textElement>
+											<textFieldExpression><![CDATA[$F{gop}]]></textFieldExpression>
+										</textField>
+									</frame>
 								</jr:listContents>
 							</jr:list>
 						</componentElement>
@@ -361,10 +397,11 @@
 		</band>
 	</detail>
 	<pageFooter>
-		<band height="54" splitType="Stretch">
+		<band height="20" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
 			<textField evaluationTime="Master">
-				<reportElement x="147" y="0" width="260" height="54" uuid="ccc46408-29d3-4feb-8cf3-3d0a426f080e"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<reportElement x="147" y="0" width="260" height="20" uuid="ccc46408-29d3-4feb-8cf3-3d0a426f080e"/>
+				<textElement textAlignment="Center" verticalAlignment="Bottom"/>
 				<textFieldExpression><![CDATA["- [ "+$V{MASTER_CURRENT_PAGE}+" / "+$V{MASTER_TOTAL_PAGES}+" ] -"]]></textFieldExpression>
 			</textField>
 		</band>
