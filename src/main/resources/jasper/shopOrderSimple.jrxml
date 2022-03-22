@@ -393,6 +393,7 @@
 											</box>
 											<textElement>
 												<font fontName="맑은 고딕" size="8"/>
+												<paragraph lineSpacing="Proportional" lineSpacingSize="0.6"/>
 											</textElement>
 											<textFieldExpression><![CDATA[$F{standard_text}]]></textFieldExpression>
 										</textField>
