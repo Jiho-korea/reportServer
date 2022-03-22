@@ -28,14 +28,14 @@ import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
 public class ShopOrderService {
 	private static final Logger log = LogManager.getLogger(ShopOrderService.class);
 
-	String reportPath = "classpath:jasper\\";
+	String reportPath = "classpath:jasper/";
 
 	public byte[] generateShopOrderSimpleReport(Map<String, Object> param) {
 		// Compile the Jasper report from .jrxml to .japser
 		byte[] data = null;
 		try {
 			JasperReport jasperReport = JasperCompileManager
-					.compileReport(ResourceUtils.getFile(reportPath + "\\shopOrderSimple.jrxml").getAbsolutePath());
+					.compileReport(ResourceUtils.getFile(reportPath + "shopOrderSimple.jrxml").getAbsolutePath());
 
 			ObjectMapper objectMapper = new ObjectMapper();
 			List list = objectMapper.readValue(param.get("orderList") + "", ArrayList.class);
