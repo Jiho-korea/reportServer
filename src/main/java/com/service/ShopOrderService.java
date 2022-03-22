@@ -11,8 +11,8 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.krysalis.barcode4j.impl.code128.Code128Bean;
 import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
+import org.springframework.core.io.ClassPathResource;
 import org.springframework.stereotype.Service;
-import org.springframework.util.ResourceUtils;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 
@@ -28,14 +28,14 @@ import net.sf.jasperreports.engine.data.JRMapCollectionDataSource;
 public class ShopOrderService {
 	private static final Logger log = LogManager.getLogger(ShopOrderService.class);
 
-	String reportPath = "classpath:jasper/";
+	String reportPath = "jasper/";
 
 	public byte[] generateShopOrderSimpleReport(Map<String, Object> param) {
 		// Compile the Jasper report from .jrxml to .japser
 		byte[] data = null;
 		try {
 			JasperReport jasperReport = JasperCompileManager
-					.compileReport(ResourceUtils.getFile(reportPath + "shopOrderSimple.jrxml").getAbsolutePath());
+					.compileReport(new ClassPathResource(reportPath + "shopOrderSimple.jrxml").getInputStream());
 
 			ObjectMapper objectMapper = new ObjectMapper();
 			List list = objectMapper.readValue(param.get("orderList") + "", ArrayList.class);
