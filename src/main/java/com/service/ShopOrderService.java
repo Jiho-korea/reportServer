@@ -1,5 +1,7 @@
 package com.service;
 
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -7,6 +9,8 @@ import java.util.Map;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.krysalis.barcode4j.impl.code128.Code128Bean;
+import org.krysalis.barcode4j.output.bitmap.BitmapCanvasProvider;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
 
@@ -36,8 +40,24 @@ public class ShopOrderService {
 			ObjectMapper objectMapper = new ObjectMapper();
 			List list = objectMapper.readValue(param.get("orderList") + "", ArrayList.class);
 			
+			log.info(list);
 			for(int i=0; i<list.size(); i++){
 				Map<String, Object> order = (HashMap)list.get(i);
+				
+				String orderNumber = (String)order.get("orderNumber");
+				log.info(orderNumber);
+				
+				Code128Bean code128Bean = new Code128Bean();
+				code128Bean.setModuleWidth(1f);	
+				code128Bean.setFontSize(0);
+				ByteArrayOutputStream out = new ByteArrayOutputStream();
+				BitmapCanvasProvider provider= new BitmapCanvasProvider(out, "image/x-png", 110, BufferedImage.TYPE_BYTE_GRAY, false, 0);
+				code128Bean.generateBarcode(provider, orderNumber);
+				    
+				provider.finish();
+				BufferedImage barcodeImage = provider.getBufferedImage();
+				order.put("orderNumberBarcode", barcodeImage);
+				
 				List orderRoutingList = (ArrayList) order.get("orderRoutingList");
 				// 테스트용 쓰레기 값 //
 				for(int j=0;j<20;j++)
@@ -45,6 +65,7 @@ public class ShopOrderService {
 				// routing 리스트 DataSource 등록
 				order.put("orderRoutingList", new JRMapCollectionDataSource(orderRoutingList));				
 			}
+			log.info(list);
 			param.put("OrderListDataSource", new JRMapCollectionDataSource(list));
 			
 			// Report에 파라미터 전달
