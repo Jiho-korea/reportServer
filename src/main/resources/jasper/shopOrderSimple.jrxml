@@ -39,14 +39,14 @@
 							<staticText>
 								<reportElement x="0" y="0" width="109" height="30" uuid="708721e8-eae3-4834-ac94-0a8d01a56c28"/>
 								<textElement textAlignment="Right" verticalAlignment="Top">
-									<font fontName="맑은 고딕" size="22" isBold="true" isItalic="true"/>
+									<font fontName="나눔고딕" size="22" isBold="true" isItalic="true"/>
 								</textElement>
 								<text><![CDATA[Operation]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="117" y="0" width="64" height="30" uuid="30fe0b9a-784e-42e1-8194-e45f18232237"/>
 								<textElement textAlignment="Left" verticalAlignment="Top">
-									<font fontName="맑은 고딕" size="22" isBold="false" isItalic="true"/>
+									<font fontName="나눔고딕" size="22" isBold="false" isItalic="true"/>
 								</textElement>
 								<text><![CDATA[Sheet]]></text>
 							</staticText>
@@ -60,21 +60,21 @@
 						<textField>
 							<reportElement x="227" y="61" width="100" height="12" uuid="55d2cc9e-fb23-468b-93cf-db30e712a68e"/>
 							<textElement textAlignment="Center" verticalAlignment="Top">
-								<font fontName="맑은 고딕" size="9"/>
+								<font fontName="나눔고딕" size="9"/>
 							</textElement>
 							<textFieldExpression><![CDATA[$F{orderNumber}]]></textFieldExpression>
 						</textField>
 						<textField>
 							<reportElement x="7" y="61" width="172" height="12" uuid="8724ffda-768f-474f-9b70-7d8584397bdd"/>
 							<textElement textAlignment="Left" verticalAlignment="Top">
-								<font fontName="맑은 고딕" size="9"/>
+								<font fontName="나눔고딕" size="9"/>
 							</textElement>
 							<textFieldExpression><![CDATA["Print Date : "+new java.text.SimpleDateFormat("yyyy-MM-dd").format(new Date())]]></textFieldExpression>
 						</textField>
 						<staticText>
-							<reportElement x="15" y="76" width="145" height="14" uuid="0473e5f8-ef6d-4896-9fee-3f401607cc12"/>
+							<reportElement x="15" y="77" width="145" height="14" uuid="0473e5f8-ef6d-4896-9fee-3f401607cc12"/>
 							<textElement verticalAlignment="Middle">
-								<font fontName="맑은 고딕" size="10" isBold="true"/>
+								<font fontName="나눔고딕" size="10" isBold="true"/>
 							</textElement>
 							<text><![CDATA[Order Infomation]]></text>
 						</staticText>
@@ -107,28 +107,28 @@
 							<staticText>
 								<reportElement x="10" y="0" width="180" height="20" uuid="5318ab96-1899-4e38-b52b-374880ea0a6e"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Material]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="214" y="0" width="83" height="20" uuid="c13d0663-59cb-4b20-b606-51d78ce33557"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Plant]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="339" y="0" width="83" height="20" uuid="200d4a48-0cec-441e-a681-97519e970be4"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Project]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="468" y="0" width="59" height="20" uuid="87ea80eb-ef3c-477b-bca4-9741c1bc22d7"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Rev.]]></text>
 							</staticText>
@@ -162,28 +162,28 @@
 							<textField isBlankWhenNull="true">
 								<reportElement x="10" y="0" width="180" height="20" uuid="9a71b729-8dcf-41d8-9296-4fc587c17cb0"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="10" isBold="true"/>
+									<font fontName="나눔고딕" size="10" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("material")]]></textFieldExpression>
 							</textField>
 							<textField isBlankWhenNull="true">
 								<reportElement x="214" y="0" width="83" height="20" uuid="c1ae9869-20a8-4b9f-ac32-50b3de72e753"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("plant")]]></textFieldExpression>
 							</textField>
 							<textField isBlankWhenNull="true">
 								<reportElement x="339" y="0" width="83" height="20" uuid="eb5b4c4f-adb6-4842-8b17-a9124c9bb9cb"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("project_name")]]></textFieldExpression>
 							</textField>
 							<textField>
 								<reportElement x="468" y="0" width="59" height="20" uuid="8830c58d-be93-47a9-ae6a-05e2a5b960ae"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("rev")!=null?$F{orderInfo}.get("rev"):"-"]]></textFieldExpression>
 							</textField>
@@ -191,7 +191,7 @@
 						<textField>
 							<reportElement x="460" y="61" width="78" height="12" uuid="b0fe50f3-6238-46ed-84cb-b0cab0ff98a6"/>
 							<textElement textAlignment="Center" verticalAlignment="Top">
-								<font fontName="맑은 고딕" size="9"/>
+								<font fontName="나눔고딕" size="9"/>
 							</textElement>
 							<textFieldExpression><![CDATA["QTY : "+String.format("%.0f", $F{orderInfo}.get("qty"))]]></textFieldExpression>
 						</textField>
@@ -214,14 +214,14 @@
 							<staticText>
 								<reportElement x="16" y="0" width="97" height="20" uuid="1324570b-7ebe-4b52-94c8-bcf22c91e5a7"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Description]]></text>
 							</staticText>
 							<textField>
 								<reportElement x="136" y="0" width="409" height="20" uuid="cf1ccb38-4a9d-4526-83c0-5d73c3241447"/>
 								<textElement textAlignment="Left" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9"/>
+									<font fontName="나눔고딕" size="9"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("description")!=null?$F{orderInfo}.get("description"):""]]></textFieldExpression>
 							</textField>
@@ -261,35 +261,35 @@
 							<staticText>
 								<reportElement x="16" y="0" width="97" height="20" uuid="3ecdbc55-2e0d-42a9-88ed-b0130a69e06b"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Start Date]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="146" y="0" width="97" height="20" uuid="e719f988-4f1f-4f36-9266-83dee63ff087"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[End Date]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="273" y="0" width="73" height="20" uuid="b8dedaef-7f7b-406c-b8b0-4ab2192eda9e"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[Order Type]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="377" y="0" width="55" height="20" uuid="eae2d0ce-d451-4f09-8563-5c261109070a"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[TV]]></text>
 							</staticText>
 							<staticText>
 								<reportElement x="470" y="0" width="55" height="20" uuid="8aedd85e-6436-4f3c-90bd-d815cee062ca"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<text><![CDATA[EFF]]></text>
 							</staticText>
@@ -329,35 +329,35 @@
 							<textField>
 								<reportElement x="16" y="0" width="97" height="20" uuid="c2c110df-0637-4ba4-9663-e7d34ee95733"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("yyyy-MM-dd").format($F{orderInfo}.get("start_date"))]]></textFieldExpression>
 							</textField>
 							<textField>
 								<reportElement x="146" y="0" width="97" height="20" uuid="aec92583-2a92-48ce-9f84-206f40c90261"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[new java.text.SimpleDateFormat("yyyy-MM-dd").format($F{orderInfo}.get("end_date"))]]></textFieldExpression>
 							</textField>
 							<textField>
 								<reportElement x="273" y="0" width="73" height="20" uuid="4f007100-7038-4847-b793-0b1e7e1ab907"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("order_category")]]></textFieldExpression>
 							</textField>
 							<textField isBlankWhenNull="true">
 								<reportElement x="377" y="0" width="55" height="20" uuid="095185c1-f52c-4536-a586-aa5aff799c3a"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("eff")]]></textFieldExpression>
 							</textField>
 							<textField isBlankWhenNull="true">
 								<reportElement x="470" y="0" width="55" height="20" uuid="0c49d312-7f25-44d2-ab57-bdec23dca936"/>
 								<textElement textAlignment="Center" verticalAlignment="Middle">
-									<font fontName="맑은 고딕" size="9" isBold="true"/>
+									<font fontName="나눔고딕" size="9" isBold="true"/>
 								</textElement>
 								<textFieldExpression><![CDATA[$F{orderInfo}.get("tv")]]></textFieldExpression>
 							</textField>
@@ -392,8 +392,8 @@
 												<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#777777"/>
 											</box>
 											<textElement>
-												<font fontName="맑은 고딕" size="8"/>
-												<paragraph lineSpacing="Proportional" lineSpacingSize="0.6"/>
+												<font fontName="나눔고딕" size="8"/>
+												<paragraph lineSpacing="Proportional" lineSpacingSize="0.7"/>
 											</textElement>
 											<textFieldExpression><![CDATA[$F{standard_text}]]></textFieldExpression>
 										</textField>
@@ -401,9 +401,9 @@
 											<reportElement positionType="Float" x="0" y="0" width="80" height="20" uuid="91c5dbdf-30da-44e2-b71a-83b783e64808">
 												<property name="com.jaspersoft.studio.unit.height" value="px"/>
 											</reportElement>
-											<box leftPadding="6"/>
+											<box topPadding="1" leftPadding="6"/>
 											<textElement>
-												<font fontName="맑은 고딕" size="15" isBold="true"/>
+												<font fontName="나눔고딕" size="15" isBold="true"/>
 											</textElement>
 											<textFieldExpression><![CDATA[$F{gop}]]></textFieldExpression>
 										</textField>
