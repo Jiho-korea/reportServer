@@ -39,33 +39,39 @@ public class ShopOrderService {
 
 			ObjectMapper objectMapper = new ObjectMapper();
 			List list = objectMapper.readValue(param.get("orderList") + "", ArrayList.class);
-			
-			log.info(list);
+
 			for(int i=0; i<list.size(); i++){
 				Map<String, Object> order = (HashMap)list.get(i);
 				
-				String orderNumber = (String)order.get("orderNumber");
-				log.info(orderNumber);
-				
+				// 바코드 generator 생성
 				Code128Bean code128Bean = new Code128Bean();
 				code128Bean.setModuleWidth(1f);	
 				code128Bean.setFontSize(0);
 				ByteArrayOutputStream out = new ByteArrayOutputStream();
 				BitmapCanvasProvider provider= new BitmapCanvasProvider(out, "image/x-png", 110, BufferedImage.TYPE_BYTE_GRAY, false, 0);
-				code128Bean.generateBarcode(provider, orderNumber);
+				code128Bean.generateBarcode(provider, (String)order.get("orderNumber"));
 				    
-				provider.finish();
-				BufferedImage barcodeImage = provider.getBufferedImage();
-				order.put("orderNumberBarcode", barcodeImage);
+				
+				BufferedImage orderNumberBarcodeImage = provider.getBufferedImage();
+				order.put("orderNumberBarcode", orderNumberBarcodeImage);
 				
 				List orderRoutingList = (ArrayList) order.get("orderRoutingList");
 				// 테스트용 쓰레기 값 //
-				for(int j=0;j<20;j++)
-					orderRoutingList.add(orderRoutingList.get(0));
+//				for(int k=0;k<10;k++) {
+//					orderRoutingList.add(orderRoutingList.get(0));
+//				}
+				
 				// routing 리스트 DataSource 등록
+				for(int j=0; j<orderRoutingList.size(); j++) {
+					Map<String, Object> orderRoutingInfo = (HashMap)orderRoutingList.get(j);
+					// routing 바코드 생성
+					code128Bean.generateBarcode(provider, orderRoutingInfo.get("order_number") + "/" +orderRoutingInfo.get("gop"));
+					BufferedImage orderRoutingInfoBarcodeImage = provider.getBufferedImage();
+					orderRoutingInfo.put("orderRoutingInfoBarcode", orderRoutingInfoBarcodeImage);
+				}
+				provider.finish();
 				order.put("orderRoutingList", new JRMapCollectionDataSource(orderRoutingList));				
 			}
-			log.info(list);
 			param.put("OrderListDataSource", new JRMapCollectionDataSource(list));
 			
 			// Report에 파라미터 전달
