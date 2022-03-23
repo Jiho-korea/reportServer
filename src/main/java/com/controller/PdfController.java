@@ -29,9 +29,16 @@ public class PdfController {
 	@Autowired
 	private ShopOrderService shopOrderService;
 
+	@PostMapping("/shopOrder")
+	public ResponseEntity<byte[]> shopOrder(@RequestParam Map<String, Object> param) throws JsonMappingException, JsonProcessingException, FileNotFoundException, JRException {
+		byte[] data = shopOrderService.generateOperationSheet(param);
+		return new ResponseEntity<byte[]>(data, HttpStatus.OK);
+
+	}
+	
 	@PostMapping("/shopOrderSimple")
 	public ResponseEntity<byte[]> shopOrderSimple(@RequestParam Map<String, Object> param) throws JsonMappingException, JsonProcessingException, FileNotFoundException, JRException {
-		byte[] data = shopOrderService.generateShopOrderSimpleReport(param);
+		byte[] data = shopOrderService.generateSimpleOperationSheet(param);
 		return new ResponseEntity<byte[]>(data, HttpStatus.OK);
 
 	}
