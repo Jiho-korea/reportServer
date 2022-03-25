@@ -10,8 +10,8 @@
 		<field name="standard_text" class="java.lang.String"/>
 		<field name="orderRoutingInfoBarcode" class="java.awt.Image"/>
 	</subDataset>
-	<parameter name="OrderListDataSource" class="net.sf.jasperreports.engine.data.JRMapCollectionDataSource"/>
 	<parameter name="orderNumber" class="java.lang.String"/>
+	<parameter name="orderInfo" class="java.util.Map"/>
 	<background>
 		<band splitType="Stretch"/>
 	</background>
@@ -28,6 +28,224 @@
 				<reportElement x="240" y="550" width="100" height="30" uuid="e878fefa-55e5-4841-bdf2-c1033e3cd4fb"/>
 				<textFieldExpression><![CDATA[$P{orderNumber}]]></textFieldExpression>
 			</textField>
+			<frame>
+				<reportElement x="0" y="31" width="555" height="49" uuid="b3bc5417-8176-4789-9503-08279d10fe39">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineColor="#777777"/>
+					<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+					<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+					<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+					<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+				</box>
+				<line>
+					<reportElement x="84" y="0" width="1" height="25" uuid="c7c2cf7b-c0dd-48f1-ba5b-1cbc9d19954b">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="167" y="0" width="1" height="25" uuid="b991bfe9-c857-4c22-83b0-77dfbb51756d">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="245" y="0" width="1" height="25" uuid="b632ba47-0d2d-46e2-8103-fb218d1dcc60">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="327" y="0" width="1" height="25" uuid="f63911eb-d4e4-490a-b69e-588c219430d5">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="406" y="0" width="1" height="25" uuid="d7e2fe50-efd8-4373-94de-e61dc4e9ec28">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="328" y="0" width="78" height="25" uuid="1d436106-348b-4306-b714-d5dfd47141a7"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[QA App. By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="246" y="0" width="81" height="25" uuid="a5eefe68-e77e-42d8-b53a-02ccefada329"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[App. Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="0" width="77" height="25" uuid="0221e9f6-9e81-4d3e-b1ef-ba83e4a9395b"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[App. By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="85" y="0" width="82" height="25" uuid="db666f54-7cb8-4ff3-ba86-34d99a48d79c"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[Plan. Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="84" height="25" uuid="1cf6a739-f74a-4fd6-a2e6-596fc312359d"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[Planner]]></text>
+				</staticText>
+				<textField>
+					<reportElement x="474" y="0" width="81" height="49" uuid="71fa7112-35e0-4096-9cd2-051747cee9fb"/>
+					<box>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+						<topPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+						<leftPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+						<bottomPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+						<rightPen lineWidth="0.5" lineStyle="Solid" lineColor="#777777"/>
+					</box>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="나눔고딕"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$P{orderInfo}.get("plant")]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="220" width="555" height="25" uuid="8fb84a6a-e048-441a-955e-9543a99dc3b3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.5" lineColor="#777777"/>
+				</box>
+				<line>
+					<reportElement x="84" y="0" width="1" height="25" uuid="d30a95c8-fb51-4e73-83a4-96a85335773c">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="167" y="0" width="1" height="25" uuid="253dfbe4-a0c1-48eb-9516-dd62520af179">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="245" y="0" width="1" height="25" uuid="b9eff4ce-4b95-4b45-b727-38934d6bd5be">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="327" y="0" width="1" height="25" uuid="3297202c-e5d8-4c4d-b738-267734814ca3">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="406" y="0" width="1" height="25" uuid="e91e9af7-0a3d-4afd-b7a5-939e116bdf41">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<line>
+					<reportElement x="487" y="0" width="1" height="25" uuid="9bf0aa5e-2f66-4d36-a130-f99a05592ab0">
+						<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					</reportElement>
+					<graphicElement>
+						<pen lineWidth="0.5" lineColor="#777777"/>
+					</graphicElement>
+				</line>
+				<staticText>
+					<reportElement x="488" y="0" width="67" height="25" uuid="5ced201e-f539-4ad3-b2ef-035788842ae0"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[Page]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="407" y="0" width="80" height="25" uuid="06108146-0ba7-4d04-8948-1c286affb807"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[QA App. Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="328" y="0" width="78" height="25" uuid="5ead95c7-7d53-42c2-9e2c-9ea712541e98"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[QA App. By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="246" y="0" width="81" height="25" uuid="4f3bcb99-1b8f-4856-b668-ee4e9370fe99"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[App. Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="168" y="0" width="77" height="25" uuid="0d613b55-d1e3-4524-a491-21cb4fb437cd"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[App. By]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="85" y="0" width="82" height="25" uuid="9223bc24-e9bc-43ef-a019-c7b7d49269ae"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[Plan. Date]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="0" y="0" width="84" height="25" uuid="a11c9073-2978-4e41-97ea-a9c8e4e7b475"/>
+					<box leftPadding="5"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="나눔고딕" size="9"/>
+					</textElement>
+					<text><![CDATA[Planner]]></text>
+				</staticText>
+			</frame>
 		</band>
 	</title>
 	<pageHeader>
