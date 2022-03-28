@@ -1,5 +1,5 @@
 server:
-  port: 9090
+  port: 9200
 
 logging:
   config: classpath:log4j2-prod.xml
@@ -7,13 +7,13 @@ logging:
 spring:
   config:
     activate:
-      on-profile: dongyoung
+      on-profile: prod
   cloud:
     gateway:
       globalcors:
         corsConfigurations:
           '[/**]':            
-            allowedOrigins: "http://ip-10-11-10-4.ap-northeast-2.compute.internal:9090"
+            allowedOrigins: "http://localhost:9090"
             allow-credentials: true
             allowedHeaders:
               - x-requested-with
@@ -27,56 +27,7 @@ spring:
               - GET
               - PUT
               - OPTIONS
-              - DELETE     
-      default-filters:
-        - name: GlobalFilter
-          args:
-            baseMessage: Spring Cloud Gateway GlobalFilter
-            preLogger: true
-            postLogger: true
-      routes:
-        - id: home
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9091/
-          predicates:
-            - Path=/
-          filters:               
-            - RewritePath=/(?<uri>.*), /front/${uri} 
-        - id: front
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9091/
-          predicates:
-            - Path=/front/**                                
-        - id: master
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9092/
-          predicates:
-            - Path=/master/**
-        - id: aps
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9093/
-          predicates:
-            - Path=/aps/**               
-        - id: pop
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9094/
-          predicates:
-            - Path=/pop/**              
-        - id: product
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9095/
-          predicates:
-            - Path=/product/**
-        - id: report
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9096/
-          predicates:
-            - Path=/report/**
-        - id: util
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9097/
-          predicates:
-            - Path=/util/**
-        - id: apsDongyoung
-          uri: http://ip-10-11-10-4.ap-northeast-2.compute.internal:9103/
-          predicates:
-            - Path=/apsDongyoung/**                                      
-  datasource:
-    driver-class-name: org.postgresql.Driver
-    url: jdbc:log4jdbc:postgresql://dongyoung.c2i01xjfrd5g.ap-northeast-2.rds.amazonaws.com:5432/core
-    username: kaicore    
-    password: ehddud12#   
-mybatis:
-  mapper-locations: classpath:sql/mapper/**/**.xml
+              - DELETE 
+                           
+file:
+  path: /data/

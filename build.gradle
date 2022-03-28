@@ -6,7 +6,7 @@ plugins {
 
 group = 'com'
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '11'
+sourceCompatibility = '16'
 
 apply plugin : 'java' 
 apply plugin : 'eclipse' 
@@ -41,8 +41,10 @@ dependencies {
 	developmentOnly "org.springframework.boot:spring-boot-devtools"	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	implementation 'net.sf.jasperreports:jasperreports:6.11.0'
+	implementation 'net.sf.jasperreports:jasperreports-fonts:6.11.0'
 	implementation 'com.github.javafaker:javafaker:1.0.1'
 	implementation 'com.lowagie:itext:2.1.7'
+	implementation 'net.sf.barcode4j:barcode4j:2.1'
 }
 
 dependencyManagement {
