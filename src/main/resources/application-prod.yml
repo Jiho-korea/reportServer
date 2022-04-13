@@ -13,7 +13,7 @@ spring:
       globalcors:
         corsConfigurations:
           '[/**]':            
-            allowedOrigins: "http://10.10.0.247:9090"
+            allowedOrigins: "*"
             allow-credentials: true
             allowedHeaders:
               - x-requested-with
